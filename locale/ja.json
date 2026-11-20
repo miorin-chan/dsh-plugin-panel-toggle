@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "プラグインパネルの切り替え",
+    "description": "Mod+Shift+, でプラグインパネルに切り替え、もう一度押すと元のページに戻ります。ダイアログが開いているときは動作しません。Mod は macOS では Command、Windows と Linux では Ctrl です。キーはショートカット設定で変更できます。"
+  }
+}

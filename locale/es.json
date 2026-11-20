@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Atajo del panel de complementos",
+    "description": "Mod+Shift+, abre el panel de complementos y la siguiente pulsación vuelve a la página anterior. Con un diálogo abierto no hace nada. Mod es Command en macOS y Control en Windows y Linux; se puede cambiar en los ajustes de atajos."
+  }
+}

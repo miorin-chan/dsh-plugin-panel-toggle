@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Raccourci du panneau des extensions",
+    "description": "Mod+Shift+, ouvre le panneau des extensions et l’appui suivant revient à la page précédente. Avec une boîte de dialogue ouverte, rien ne se passe. Mod correspond à Command sur macOS et à Control sous Windows et Linux ; le raccourci se modifie dans les réglages des raccourcis."
+  }
+}

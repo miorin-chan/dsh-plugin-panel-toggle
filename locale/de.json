@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Tastenkürzel für den Plugin-Bereich",
+    "description": "Mod+Shift+, öffnet den Plugin-Bereich; der nächste Tastendruck führt zurück zur vorherigen Seite. Bei einem offenen Dialog passiert nichts. Mod ist auf macOS Command und unter Windows und Linux Strg; die Tastenkombination lässt sich in den Tastenkürzel-Einstellungen ändern."
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Atalho do painel de plugins",
+    "description": "Mod+Shift+, abre o painel de plugins e um novo toque volta à página anterior. Com uma caixa de diálogo aberta, nada acontece. Mod é Command no macOS e Control no Windows e Linux; o atalho pode ser alterado nas configurações de atalhos."
+  }
+}
