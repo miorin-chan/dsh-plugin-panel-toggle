@@ -1,13 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-  <rect x="6" y="6" width="15" height="15" rx="4.5" fill="#A797FC" fill-opacity="0.5"/>
-  <rect x="13.5" y="13.5" width="17" height="17" rx="5.5" fill="url(#plugin-panel-toggle-key)"/>
-  <path d="M18.5 22H25.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M20.6 19.9L18.5 22L20.6 24.1" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M23.4 19.9L25.5 22L23.4 24.1" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
   <defs>
-    <linearGradient id="plugin-panel-toggle-key" x1="22" y1="13.5" x2="22" y2="30.5" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#7AC2FF"/>
-      <stop offset="1" stop-color="#4A65E8"/>
+    <linearGradient id="plugin-panel-toggle-key" x1="7" y1="9" x2="29" y2="27" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6FB2EE"/>
+      <stop offset="1" stop-color="#3E58D6"/>
     </linearGradient>
+    <mask id="plugin-panel-toggle-arrows" maskUnits="userSpaceOnUse" x="6" y="9" width="24" height="18">
+      <rect x="6" y="9" width="24" height="18" fill="white"/>
+      <path d="M12 15H24M21.5 12.5L24 15L21.5 17.5M24 21H12M14.5 18.5L12 21L14.5 23.5"
+            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </mask>
   </defs>
+  <rect x="6" y="9" width="24" height="18" rx="5" fill="url(#plugin-panel-toggle-key)"
+        mask="url(#plugin-panel-toggle-arrows)"/>
 </svg>
