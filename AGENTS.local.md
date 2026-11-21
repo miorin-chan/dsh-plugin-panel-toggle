@@ -25,6 +25,10 @@
 
 ## 实现
 
+- 新增实现用 TypeScript，复用与目标 DSH 版本匹配的官方类型，在接口、配置和事件中保留类型信息，并同步维护类型依赖。
+- 新实现限于 DSH 支持的插件 API 和扩展点。
+  禁止修改 DSH 源码或安装产物，也禁止用全局猴子补丁或覆写内部实现绕过边界。
+  扩展点不足时说明缺口，并将实现限制在插件能力内。
 - 只用公开面：`ctx.shortcuts.register`、`ctx.layout.panelInfo`、`ctx.layout.selectPanel`。
   不读 DSH 内部 store、不写 DOM、不包装别的插件的命令解析器。
 - 面板 id `plugins` 归 `@deepseek-ai/dsh-client-ui-plugin-manager` 所有。
