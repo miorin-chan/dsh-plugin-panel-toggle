@@ -17,11 +17,13 @@
 
 ## 结构
 
-- `client.js` 是浏览器半：手写的 module-loader 产物，不经过构建。
-  修改前先读它顶部的机制说明。
-- `index.js` 是 Host 半，保持无副作用，只用于让 bundle 行被加载。
-- `locale/*.json` 只放 Plugin Manager 读取的 `meta.title` / `meta.description`；
-  命令标签等运行时文案在 `client.js` 的 `LABELS` 里。
+- [浏览器源码](src/client/index.ts) 构建为 [client.js](client.js)。
+  修改前先读源码顶部的机制说明。
+- [Host 源码](src/host/index.ts) 构建为 [index.js](index.js)，保持无副作用，只用于让 bundle 行被加载。
+- JavaScript 产物入库，由 [构建脚本](scripts/build.mjs) 生成。
+  DSH 类型依赖用 `import type` 引入。
+- `locale/*.json` 只放 Plugin Manager 读取的 `meta.title` 和 `meta.description`。
+  命令标签等运行时文案在浏览器源码的 `LABELS` 里。
 - `test/client.test.mjs` 用假的 `ctx` 固定四件事：六个平台的默认键位、来处记忆（含鼠标打开插件面板的情形）、
   弹窗与面板缺失时的出口、卸载清理。
 
@@ -50,7 +52,7 @@
 - 默认键位用 `primary`，由插件层按平台展开；不要手写 `meta` / `control`。
 - 注册默认键位可能与既有命令冲突。
   冲突时保留命令但去掉默认键位（fail-open），并在控制台留下警告，让用户能在设置里自己改。
-- DSH 升级后先重跑 `node --test`，再在真实界面确认两个方向。
+- DSH 升级后先更新类型依赖并运行 `npm run check`，再在真实界面确认两个方向。
   若面板 id 或 `ctx.layout` 结构变化，插件应失活或静默，而不是报错波及键盘。
 
 将注册与清理放在 `apply` 的 `ctx.effect` 或 `ctx.on` 中，保持 factory 无副作用。
@@ -60,7 +62,11 @@
 
 主版本升级由用户决定，常规迭代沿用当前主版本。
 
-- 在项目根运行 `node --test` 和 `node --check client.js && node --check index.js`。
+- 在项目根用 `npm install` 或 `pnpm install` 安装开发依赖并构建。
+  改动源码后用 `npm run build` 更新产物，用 `npm test` 重新构建并测试。
+- 在 DSH shell 运行 `npm run check`，依次核对产物、运行测试、检查类型并核对当前 DSH 的类型包版本。
+  升级 DSH 后先执行 `node scripts/sync-types.mjs` 查看新的固定版本。
+- 用 `node --check client.js && node --check index.js` 验证语法，用 `npm pack --dry-run --json` 核对发布文件。
 - 在默认工作区根运行 `node tools/new-dsh-plugin/cli.mjs --check plugins/dsh-plugin-panel-toggle`。
 - 安装、卸载及实机验证使用一次性 profile。
   报告区分夹具测试和实机观察。

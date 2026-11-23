@@ -20,6 +20,7 @@ The default is `⌘⇧,` on macOS and `Ctrl+Shift+,` elsewhere; rebind it in **S
 
 ## Install
 
+Run `npm ci` in the source checkout to install the development dependencies and build the plugin.
 Install this directory as a local bundle: **Plugins** > **Add plugin**,
 or let the agent run `install_bundle` on this directory.
 The plugin appears in **Plugins** as **Plugins panel shortcut** / **插件面板快捷键**.
