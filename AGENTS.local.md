@@ -17,14 +17,17 @@
 
 ## 结构
 
+`npm run build:tools` 从 `scripts/` 下的 `.mts` 生成同路径 `.mjs`，Git 跟踪 TypeScript 源码。
+Node.js 22.18 或更新版本直接运行 `.test.mts`。
+
 - [浏览器源码](src/client/index.ts) 构建为 `client.js`。
   修改前先读源码顶部的机制说明。
 - [Host 源码](src/host/index.ts) 构建为 `index.js`，保持无副作用，只用于让 bundle 行被加载。
-- Git 忽略 [构建脚本](scripts/build.mjs) 生成的 JavaScript 文件，npm 打包时包含这些文件。
+- Git 忽略 [构建脚本](scripts/build.mts) 生成的 JavaScript 文件，npm 打包时包含这些文件。
   DSH 类型依赖用 `import type` 引入。
 - `locale/*.json` 只放 Plugin Manager 读取的 `meta.title` 和 `meta.description`。
   命令标签等运行时文案在浏览器源码的 `LABELS` 里。
-- `test/client.test.mjs` 用假的 `ctx` 固定四件事：六个平台的默认键位、来处记忆（含鼠标打开插件面板的情形）、
+- `test/client.test.mts` 用假的 `ctx` 固定四件事：六个平台的默认键位、来处记忆（含鼠标打开插件面板的情形）、
   弹窗与面板缺失时的出口、卸载清理。
 
 ## 复用 DSH 原生界面
