@@ -17,10 +17,10 @@
 
 ## 结构
 
-- [浏览器源码](src/client/index.ts) 构建为 [client.js](client.js)。
+- [浏览器源码](src/client/index.ts) 构建为 `client.js`。
   修改前先读源码顶部的机制说明。
-- [Host 源码](src/host/index.ts) 构建为 [index.js](index.js)，保持无副作用，只用于让 bundle 行被加载。
-- JavaScript 产物入库，由 [构建脚本](scripts/build.mjs) 生成。
+- [Host 源码](src/host/index.ts) 构建为 `index.js`，保持无副作用，只用于让 bundle 行被加载。
+- Git 忽略 [构建脚本](scripts/build.mjs) 生成的 JavaScript 文件，npm 打包时包含这些文件。
   DSH 类型依赖用 `import type` 引入。
 - `locale/*.json` 只放 Plugin Manager 读取的 `meta.title` 和 `meta.description`。
   命令标签等运行时文案在浏览器源码的 `LABELS` 里。
@@ -62,7 +62,7 @@
 
 主版本升级由用户决定，常规迭代沿用当前主版本。
 
-- 在项目根用 `npm install` 或 `pnpm install` 安装开发依赖并构建。
+- 新检出后在项目根运行 `npm ci`，安装锁定的开发依赖并生成运行文件。
   改动源码后用 `npm run build` 更新产物，用 `npm test` 重新构建并测试。
 - 在 DSH shell 运行 `npm run check`，依次核对产物、运行测试、检查类型并核对当前 DSH 的类型包版本。
   升级 DSH 后先执行 `node scripts/sync-types.mjs` 查看新的固定版本。
