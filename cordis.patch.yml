@@ -2,4 +2,4 @@
 # package.json `dsh.client` and registers the Plugins panel toggle command.
 - insert:
     - id: dsh-plugin-panel-toggle
-      name: 'dsh-plugin-panel-toggle'
+      name: '@miorin/dsh-plugin-panel-toggle'

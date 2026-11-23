@@ -12,7 +12,7 @@ globalThis.window = {
 }
 await import('../client.js')
 
-assert.equal(registration.id, 'dsh-plugin-panel-toggle')
+assert.equal(registration.id, '@miorin/dsh-plugin-panel-toggle')
 const plugin = registration.factory()
 
 /**

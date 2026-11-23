@@ -14,7 +14,7 @@
  */
 
 window.__ModuleLoader__.load({
-  id: 'dsh-plugin-panel-toggle',
+  id: '@miorin/dsh-plugin-panel-toggle',
   factory() {
     const NS = 'dsh-plugin-panel-toggle'
     const COMMAND_ID = 'plugins.panel.toggle'
