@@ -1,7 +1,6 @@
 {
   "name": "@miorin/dsh-plugin-panel-toggle",
   "version": "0.1.0",
-  "private": true,
   "license": "MIT",
   "description": "Adds a Mod+Shift+, shortcut that switches to the Plugins panel and back to the page you left.",
   "type": "module",
@@ -42,5 +41,8 @@
   },
   "scripts": {
     "test": "node --test"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
