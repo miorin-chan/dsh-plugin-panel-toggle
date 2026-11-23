@@ -71,7 +71,7 @@ Node.js 22.18 或更新版本直接运行 `.test.mts`。
 - 在 DSH shell 运行 `npm run check`，依次核对产物、运行测试、检查类型并核对当前 DSH 的类型包版本。
   升级 DSH 后先执行 `node scripts/sync-types.mjs` 查看新的固定版本。
 - 用 `node --check client.js && node --check index.js` 验证语法，用 `npm pack --dry-run --json` 核对发布文件。
-- 在默认工作区根运行 `node tools/new-dsh-plugin/cli.mjs --check plugins/dsh-plugin-panel-toggle`。
+- 在默认工作区根运行 `node tools/new-dsh-plugin/cli.mts --check plugins/dsh-plugin-panel-toggle`。
 - 安装、卸载及实机验证使用一次性 profile。
   报告区分夹具测试和实机观察。
 - 用 `docs/scripts/reflow md <path>` 重排修改过的英文 Markdown。
