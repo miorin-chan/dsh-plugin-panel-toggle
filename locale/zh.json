@@ -1,6 +1,7 @@
 {
   "meta": {
     "title": "插件面板快捷键",
-    "description": "Mod+Shift+, 切换到插件面板，再按一次回到离开的页面；弹窗打开时不生效。Mod 在 macOS 上是 Command，在 Windows 与 Linux 上是 Ctrl，可在设置 > 快捷键中改键。"
+    "description": "Mod+Shift+, 切换到插件面板，再按一次回到离开的页面；弹窗打开时不生效。Mod 在 macOS 上是 Command，在 Windows 与 Linux 上是 Ctrl，可在设置 > 快捷键中改键。",
+    "detail": "docs/DETAIL.zh.md"
   }
 }

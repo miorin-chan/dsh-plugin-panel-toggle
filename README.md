@@ -34,6 +34,15 @@ The plugin appears in **Plugins** as **Plugins panel shortcut** / **插件面板
   to the page you left.
 - The shortcut is listed in **Settings** > **Shortcuts**, so it can be rebound or cleared like any other command.
 
+## Screenshots
+
+The **Plugins** panel after pressing the shortcut from the automation page.
+The screenshots show the Chinese UI.
+
+![Plugins panel opened with the Plugins panel shortcut](docs/assets/screenshots/main-light.png)
+
+[Main view in dark mode](docs/assets/screenshots/main-dark.png)
+
 ## Limitations
 
 - While a dialog is open the press is left alone: with a dialog in front,
