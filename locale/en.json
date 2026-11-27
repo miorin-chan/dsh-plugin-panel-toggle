@@ -1,6 +1,7 @@
 {
   "meta": {
     "title": "Plugins panel shortcut",
-    "description": "Mod+Shift+, switches to the Plugins panel, and the next press returns to the page you left. A press while a dialog is open does nothing. Mod is Command on macOS and Control on Windows and Linux; rebind it in Settings > Shortcuts."
+    "description": "Mod+Shift+, switches to the Plugins panel, and the next press returns to the page you left. A press while a dialog is open does nothing. Mod is Command on macOS and Control on Windows and Linux; rebind it in Settings > Shortcuts.",
+    "detail": "docs/DETAIL.md"
   }
 }
